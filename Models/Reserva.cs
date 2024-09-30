@@ -48,11 +48,13 @@ namespace DesafioProjetoHospedagem.Models
             // *IMPLEMENTE AQUI*
             decimal valor = 0;
 
+            valor = DiasReservados * Suite.ValorDiaria;
+
             // Regra: Caso os dias reservados forem maior ou igual a 10, conceder um desconto de 10%
             // *IMPLEMENTE AQUI*
-            if (true)
+            if (valor >= 10)
             {
-                valor = 0;
+                valor = valor - (valor * (decimal)0.10);
             }
 
             return valor;
